@@ -1,0 +1,62 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+     
+
+app_login:
+    path:     /login
+    defaults: { _controller: AppBundle:Pages:index } 
+
+app_authentif:
+    path:     /authentification
+    defaults: { _controller: AppBundle:Authentification:index }     
+
+app_livres_dispo:
+    path:     /livres_dispo
+    defaults: { _controller: AppBundle:Livres_Dispo:index }     
+
+app_reserver:
+    path:     /livres_reserver
+    defaults: { _controller: AppBundle:Reserver:index }    
+    
+app_editer:
+    path:     /editer
+    defaults: { _controller: AppBundle:Editer:index }      
+
+app_emprunt:
+    path:     /emprunt
+    defaults: { _controller: AppBundle:Emprunt:index }   
+
+app_retour:
+    path:     /retour
+    defaults: { _controller: AppBundle:Retour:index }   
+
+app_donation:
+    path:     /donation
+    defaults: { _controller: AppBundle:Donation:index }       
+
+app_deconexion:
+    path:     /
+    defaults: { _controller: AppBundle:Deconexion:index }      
+    
+app_home:
+    path:     /accueil
+    defaults: { _controller: AppBundle:Accueil:index }     
+    
+    
+    
+    
+    
+    
+
+
+   
+    
+
+
+
+
+    
+    
+    

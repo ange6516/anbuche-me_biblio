@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+            
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+            <header>
+             <h1 class="center_titre"> A-N B.U.C.H.E & moi </h1>
+             <div class="container header ">
+                  <div class="container" >                
+                
+                
+                
+                   
+                 
+
+                
+                
+                  
+             </div>
+
+             </header> 
+
+             
+           
+                                 
+
+               
+           
+               
+        {% block body %}
+            
+        {% endblock %}
+        {% block javascripts %}
+
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'menu.html' %}
+
+
+
+<h1> Mes Emprunt </h1>
+
+
+
+{% for emprunt in emprunt %}
+
+<table class="table table-striped">
+
+
+
+<tr>
+    <th>Couverture</th>
+    <th>Titre</th>
+    <th>Résumè</th>
+    <th>restituer</th>
+    
+</tr>
+
+    <tr>        
+        
+        <td><img src="/anbuche/web/{{emprunt.couverture}}" /></td>        
+        <td>{{emprunt.titre}}</td>
+        <td>{{emprunt.resume}}</td>
+         <td><a class="btnColor" href="{{path('app_retour',{'idLivre':emprunt.id})}}"> Rendre </a></td>
+                       
+                
+       
+    </tr>
+ {% endfor %}   
+</table>
+
+{% endblock %}

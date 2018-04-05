@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'menu.html' %}
+
+
+<h1> Mes Livres </h1>
+
+
+
+
+
+
+<table class="table table-striped">
+
+
+
+<tr>
+    <th>Couverture</th>
+    <th>Titre</th>
+    <th>Résumè</th>
+    
+    
+</tr>
+       {% for listeDonation in listeDonation %}
+
+    <tr>        
+        
+        <td><img src="/anbuche/web/{{listeDonation.couverture}}" /></td>        
+        <td>{{listeDonation.titre}}</td>
+        <td>{{listeDonation.resume}}</td>
+        
+                       
+                
+       
+    </tr>
+ {% endfor %}   
+</table>
+</div>
+
+{% endblock %}

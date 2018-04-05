@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'menu.html' %}
+{% for infosLivre in infoLivre %}
+<h1> Edition du livre : {{infosLivre.titre}} </h1>
+
+<table class="table table-striped">
+
+<tr>
+    <th>Couverture</th>
+    <th>Titre</th>
+    <th>Résumè</th>
+    <th>Disponible</th>
+    <th>Commentaire</th>
+</tr>
+
+    <tr>        
+        
+        <td><img src="/anbuche/web/{{infosLivre.couverture}}" /></td>        
+        <td>{{infosLivre.titre}}</td>
+        <td>{{infosLivre.resume}}</td>
+        {% if infosLivre.etat == 1 %}
+        <td>Non </td>
+        {% elseif infosLivre.etat == 0 %}
+        <td>
+             oui
+            
+        </td>
+        {% endif %}         
+        <td>{{infosLivre.commentaire}}</td>              
+                
+       
+    </tr>
+ {% endfor %}   
+</table>
+
+{% endblock %}

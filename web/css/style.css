@@ -1,0 +1,77 @@
+
+.center_titre 
+{
+	margin-left : 350px;	
+}
+
+
+.bouton_login
+{
+	
+	margin-top: -130px;
+	margin-left: 650px;
+}
+
+
+
+
+.bouton_accueil
+{
+	margin-top: -180px;
+	margin-left: 850px;
+	
+}
+
+.bouton_mesLivres
+{
+	margin-top: -180px;
+	
+	
+}
+
+.bouton_emprunt
+{
+	margin-top: -180px;
+	
+	
+}
+
+.bouton_deconnexion
+{
+	margin-top: -180px;
+	
+	
+}
+
+.bouton_livresDispo
+{
+	margin-top: -180px;
+	
+	
+}
+
+.menu{
+
+	margin-top: -147px;
+	margin-left :600px;
+	
+ }
+
+ .menuAccueil{
+
+	margin-top: 20px;
+	
+ }
+
+ .log_pos 
+ {
+	margin-top: 100px; 
+ }
+
+ .header 
+ {
+	margin-left: 200px; 
+	display :inline ;
+ }
+
+ 

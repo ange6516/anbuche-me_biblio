@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% set pseudo = pseudo %} 
+{% include 'menu.html' %}
+
+<h1> Livre disponible :</h1>
+
+
+<table class="table table-striped">
+
+<tr>
+    <th>Couverture</th>
+    <th>Titre</th>
+    <th>Résumè</th>
+    <th>Disponible</th>
+    <th>Editer</th>
+</tr>
+{% for livresDispo in livreDispo %}
+    <tr>        
+        
+        <td><img src="/anbuche/web/{{livresDispo.couverture}}" /></td>        
+        <td>{{livresDispo.titre}}</td>
+        <td>{{livresDispo.resume}}</td>
+        {% if livresDispo.etat == 1 %}
+        <td>Prêté </td>
+        {% elseif livresDispo.etat == 0 %}
+        <td>
+             <a class="btnColor" href="{{path('app_reserver',{'idLivre':livresDispo.id,'pseudo':pseudo})}}"> Disponible </a>
+                        
+        </td>
+        {% endif %}   
+               
+        <td> 
+            <a class="btnColor" href="{{path('app_editer',{'idLivre':livresDispo.id,'pseudo':pseudo})}}"> Editer </a> 
+            
+            
+       </td>  
+         
+       
+    </tr>
+ {% endfor %}   
+</table>
+
+{% endblock %}
